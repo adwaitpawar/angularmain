@@ -30,4 +30,5 @@ jobs:
         npm rebuild
         npm audit fix --force
         npm rebuild
+        npm audit fix
         ng serve
