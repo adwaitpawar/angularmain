@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]  # Adjust the Node.js version as needed
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v3
@@ -28,7 +28,5 @@ jobs:
       run: |
         npm install
         npm rebuild
-        npm audit fix --force
-        npm rebuild
         npm audit fix
-        ng serve
+        npm test
